@@ -5,10 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+
 </head>
 <body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
-<script src="https://unpkg.com/vue"></script>
+  <!-- We create an container and tell Vue to take control of it -->
+  <div id="app">
+    <form action="">
+      <input type="text" v-model="userInput">
+      <button v-on:click="addTodo">Add todo</button>
+
+    </form>
+
+    <ul>
+      <li v-for="todo in todos" v-on:click="removeTodo(todo)">{{ todo.value }}</li>
+    </ul>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="main.js"></script>
+
 </body>
 </html>
